@@ -290,6 +290,7 @@ Below is a list of essential programs I install on every fresh Windows build. Yo
 | **Revo Uninstaller** | Advanced program uninstallation | [revouninstaller.com](https://www.revouninstaller.com/revo-uninstaller-free-download/) |
 | **Steam** | Game launcher / store | [steampowered.com](https://store.steampowered.com/about/) |
 | **SumatraPDF** | Lightweight PDF reader | [sumatraPDF.org](https://www.sumatrapdfreader.org/download-free-pdf-viewer) |
+| **Visual C++ Redistributable** | Runtime libraries for games and applications (required by many games) | [microsoft.com](https://learn.microsoft.com/en-us/cpp/windows/latest-supported-vc-redist?view=msvc-170) |
 | **Visual Studio Code** | Code editor | [code.visualstudio.com](https://code.visualstudio.com/download) |
 | **VLC Media Player** | Media player (plays any video format) | [videolan.org](https://www.videolan.org/vlc/download-windows.html) |
 | **WinRAR** | File archiving / extracting | [win-rar.com](https://www.win-rar.com/download.html) |
@@ -314,6 +315,7 @@ Instead of downloading each installer manually, you can use Winget - Microsoft's
    - `winget install -e --id GIMP.GIMP`
    - `winget install -e --id BlenderFoundation.Blender`
    - `winget install -e --id LibreOffice.LibreOffice`
+   - `winget install -e --id Microsoft.VCRedist.2015+.x64`
 
 > [!NOTE]
 > Not every program is available on Winget. For programs not listed above (e.g., DaVinci Resolve, Epic Games, GOG Galaxy, Itch.io etc), you will need to download them manually from the links in the table above.
