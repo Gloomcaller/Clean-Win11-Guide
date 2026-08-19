@@ -303,17 +303,17 @@ Instead of downloading each installer manually, you can use Winget - Microsoft's
 
 1. Open PowerShell as Administrator (right-click Start Menu > Terminal (Admin)).
 2. Copy and paste these commands and press **Enter**:
-   `winget install -e --id Discord.Discord`
-   `winget install -e --id Mozilla.Firefox`
-   `winget install -e --id Valve.Steam`
-   `winget install -e --id VideoLAN.VLC`
-   `winget install -e --id Microsoft.VisualStudioCode`
-   `winget install -e --id qBittorrent.qBittorrent`
-   `winget install -e --id OBSProject.OBSStudio`
-   `winget install -e --id Git.Git`
-   `winget install -e --id GIMP.GIMP`
-   `winget install -e --id BlenderFoundation.Blender`
-   `winget install -e --id LibreOffice.LibreOffice`
+   - `winget install -e --id Discord.Discord`
+   - `winget install -e --id Mozilla.Firefox`
+   - `winget install -e --id Valve.Steam`
+   - `winget install -e --id VideoLAN.VLC`
+   - `winget install -e --id Microsoft.VisualStudioCode`
+   - `winget install -e --id qBittorrent.qBittorrent`
+   - `winget install -e --id OBSProject.OBSStudio`
+   - `winget install -e --id Git.Git`
+   - `winget install -e --id GIMP.GIMP`
+   - `winget install -e --id BlenderFoundation.Blender`
+   - `winget install -e --id LibreOffice.LibreOffice`
 
 > [!NOTE]
 > Not every program is available on Winget. For programs not listed above (e.g., DaVinci Resolve, Epic Games, GOG Galaxy, Itch.io etc), you will need to download them manually from the links in the table above.
