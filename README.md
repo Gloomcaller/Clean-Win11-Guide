@@ -39,8 +39,6 @@ Rufus allows you to bypass TPM 2.0, Secure Boot, and RAM requirements easily.
    - (Optional) Set local account and username.
 5. Click START and wait for the progress bar to finish. Once done, your USB is ready.
 
-Screenshot reference: assets/rufus-settings.png
-
 ---
 
 Option B: Using the Official Windows 11 Media Creation Tool (Recommended for modern PCs)
@@ -56,8 +54,6 @@ If your PC meets Windows 11's official hardware requirements (TPM 2.0, Secure Bo
 7. Choose your USB drive from the list and click Next.
 8. The tool will download Windows 11 and create the bootable USB automatically (This may take some time depending on your internet speed).
 9. Click Finish once done.
-
-Screenshot reference: assets/media-creation-tool.png
 
 ---
 
@@ -104,8 +100,6 @@ Your PC will now restart and boot from the USB drive.
 > - Enable **CSM** or **Legacy Mode** (if available).
 > - Try plugging the USB into a different port (preferably a USB 2.0 port - black or white interior - if USB 3.0 ports are not recognized).
 
-Screenshot reference: assets/bios-boot-menu.jpg
-
 ---
 
 Once your PC boots from the USB, you will see a blue Windows setup screen. Proceed to Step 3.
@@ -139,8 +133,6 @@ Your PC will now boot from the USB drive. You'll see a blue Windows setup screen
 
 > [!IMPORTANT]
 > Do NOT unplug the USB drive during the installation. You can safely remove it only after the PC restarts and you see the "Let's start with region" screen again.
-
-Screenshot reference: assets/delete-partitions.png
 
 ---
 
@@ -232,3 +224,125 @@ Use this method if you prefer downloading a file or cannot use the PowerShell me
 ---
 
 Once activation is complete, proceed to Step 7.
+
+## Step 7: Bloatware Removal
+
+Before making any system changes, it's good practice to create a restore point. This allows you to undo changes if something goes wrong.
+
+### Create a System Restore Point
+
+1. Type "Create a restore point" in the Windows search bar and open it.
+2. Select your system drive (usually C:) and click **Configure**.
+3. Select **Turn on system protection** and set the disk space usage to around 5-10%.
+4. Click **Apply** and **OK**.
+5. Click **Create**, name the restore point (e.g., "Fresh Windows"), and click **Create** again.
+6. Wait for it to complete and click **Close**.
+
+---
+
+Now that you have a restore point, you can safely run WinHance to clean up Windows 11's telemetry and pre-installed junk (Candy Crush, Xbox ads, etc.).
+
+### Running WinHance
+
+1. Open PowerShell as Administrator (right-click Start Menu > Terminal (Admin)).
+2. Copy and paste this command and press **Enter**:
+   `irm "https://christitus.com/win" | iex`
+3. In the GUI that appears, select:
+   - **Recommended Tweaks** (green checkmark).
+   - **Remove Bloatware**.
+4. Click **Run Tweaks** and wait for it to finish.
+5. Restart your PC once complete.
+
+> [!CAUTION]
+> Only change settings you understand - stick to "Recommended" to keep your system stable. If something breaks, you can use the restore point you created to go back.
+> Many of the Windows 11 settings and applications are useful and you might want to remove only the ones you will never use.
+> Our goal here is to reduce the background processes on your PC and have it run better and lighter, not remove all of its functionality.
+
+---
+
+Once your PC has restarted, proceed to Step 8.
+
+## Step 8: Installing Recommended Apps
+
+Below is a list of essential programs I install on every fresh Windows build. You can pick and choose what you need.
+
+---
+
+### Recommended Programs
+
+| Program | What it's used for | Download Link |
+|---------|-------------------|---------------|
+| **Blender** | 3D modeling and animation | [blender.org](https://www.blender.org/) |
+| **DaVinci Resolve** | Video editing and color grading | [blackmagicdesign.com](https://www.blackmagicdesign.com/products/davinciresolve) |
+| **DirectX** | Gaming graphics runtime | [microsoft.com](https://www.microsoft.com/en-us/download/details.aspx?id=35) |
+| **Discord** | Voice and text chat for gaming | [discord.com](https://discord.com/download) |
+| **Epic Games** | Game launcher / store | [epicgames.com](https://store.epicgames.com/) |
+| **Firefox** | Web browser | [mozilla.org](https://www.mozilla.org/firefox/new/) |
+| **Gimp** | Image editing (Photoshop alternative) | [gimp.org](https://www.gimp.org/) |
+| **Godot Engine** | Game development | [godotengine.org](https://godotengine.org/download/windows) |
+| **GOG Galaxy** | Game launcher / store (DRM-free) | [gog.com](https://www.gog.com/galaxy) |
+| **Itch.io** | Indie game launcher / store | [itch.io](https://itch.io/app) |
+| **Krita** | Digital painting / illustration | [krita.org](https://krita.org/en/download/) |
+| **LibreOffice** | Office suite (Microsoft Office alternative) | [libreoffice.org](https://www.libreoffice.org/download/download-libreoffice/) |
+| **OBS Studio** | Screen recording / streaming | [obsproject.com](https://obsproject.com/) |
+| **OpenRGB** | RGB lighting control | [openrgb.org](https://openrgb.org/) |
+| **qBittorrent** | Torrent client | [qbittorrent.org](https://www.qbittorrent.org/download) |
+| **Revo Uninstaller** | Advanced program uninstallation | [revouninstaller.com](https://www.revouninstaller.com/revo-uninstaller-free-download/) |
+| **Steam** | Game launcher / store | [steampowered.com](https://store.steampowered.com/about/) |
+| **SumatraPDF** | Lightweight PDF reader | [sumatraPDF.org](https://www.sumatrapdfreader.org/download-free-pdf-viewer) |
+| **Visual Studio Code** | Code editor | [code.visualstudio.com](https://code.visualstudio.com/download) |
+| **VLC Media Player** | Media player (plays any video format) | [videolan.org](https://www.videolan.org/vlc/download-windows.html) |
+| **WinRAR** | File archiving / extracting | [win-rar.com](https://www.win-rar.com/download.html) |
+| **XNAFX** | DirectX runtime for older games | [microsoft.com](https://www.microsoft.com/en-us/download/details.aspx?id=20914) |
+
+---
+
+### Automated Installation with Winget (Recommended for advanced users)
+
+Instead of downloading each installer manually, you can use Winget - Microsoft's built-in package manager - to install multiple programs in one go.
+
+1. Open PowerShell as Administrator (right-click Start Menu > Terminal (Admin)).
+2. Copy and paste these commands and press **Enter**:
+   `winget install -e --id Discord.Discord`
+   `winget install -e --id Mozilla.Firefox`
+   `winget install -e --id Valve.Steam`
+   `winget install -e --id VideoLAN.VLC`
+   `winget install -e --id Microsoft.VisualStudioCode`
+   `winget install -e --id qBittorrent.qBittorrent`
+   `winget install -e --id OBSProject.OBSStudio`
+   `winget install -e --id Git.Git`
+   `winget install -e --id GIMP.GIMP`
+   `winget install -e --id BlenderFoundation.Blender`
+   `winget install -e --id LibreOffice.LibreOffice`
+
+> [!NOTE]
+> Not every program is available on Winget. For programs not listed above (e.g., DaVinci Resolve, Epic Games, GOG Galaxy, Itch.io etc), you will need to download them manually from the links in the table above.
+> Also, I listed the Winget install lines separately. You can copy paste all of them at the same time and Winget will download them all in order.
+
+---
+
+Once all apps are installed, your Windows 11 setup is complete! Enjoy your clean, debloated system.
+
+---
+
+## Acknowledgments
+
+A huge thank you to the following projects and developers for creating tools that make PC building and maintenance easier for everyone:
+
+- **[Rufus](https://rufus.ie/)** – For providing a simple, reliable way to create bootable USB drives and for keeping it free and open source.
+- **[Microsoft Activation Scripts](https://github.com/massgravel/Microsoft-Activation-Scripts)** – For offering a legitimate, open-source activation solution that helps users get the most out of their Windows installations.
+- **[WinHance](https://github.com/memstechtips/Winhance)** – For creating an easy-to-use debloat tool that gives users control over their Windows experience.
+
+These tools are provided free of charge and are invaluable to the PC community. If you find them useful, consider supporting their developers.
+
+---
+
+## Contributing
+
+Found a mistake or outdated step? Feel free to open an Issue or submit a Pull Request. This guide is open to the community to expand.
+
+---
+
+## License
+
+[MIT](LICENSE) – Use it, share it, and send it to anyone asking "how do I reset my PC?"
