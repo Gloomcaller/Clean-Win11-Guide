@@ -166,3 +166,69 @@ Windows 11 forces you to connect to Wi-Fi and sign in with a Microsoft account d
 ---
 
 Once you have created your account, Windows will prepare your desktop. This may take a few minutes. Proceed to Step 5.
+
+## Step 5: First Boot and Critical Drivers
+
+Once Windows prepares your desktop, you will be logged in and ready to go. First, connect to the internet and install all necessary drivers.
+
+### Connect to the Internet
+
+1. Click the network icon in the bottom-right corner of the taskbar.
+2. Connect to your Wi-Fi network or plug in an Ethernet cable.
+
+> [!TIP]
+> If you don't see your Wi-Fi network, Windows may be missing the drivers for your Wi-Fi card. Download the Wi-Fi drivers from your motherboard or laptop manufacturer's website using your phone, transfer them via USB cable, and install them on your PC.
+
+### Install Windows Updates
+
+1. Open **Settings** (press **Windows + I** or right-click the Start Menu and select Settings).
+2. Go to **Windows Update** and click **Check for updates**.
+3. Install all available updates. Restart if prompted.
+4. **Repeat this 2-3 times** until no more updates appear. Some updates are installed in stages.
+
+### Install GPU and Chipset Drivers
+
+Windows Update usually installs basic display drivers, but for the best performance and stability, you should install the latest drivers directly from your hardware manufacturer.
+
+- **NVIDIA GPUs:** Download from https://www.nvidia.com/en-us/drivers/
+- **AMD GPUs:** Download from https://www.amd.com/en/support
+- **Intel GPUs and Chipset:** Download from https://www.intel.com/content/www/us/en/support/detect.html
+
+Download and install the appropriate driver for your hardware, then restart your PC.
+
+---
+
+Once your drivers are installed and your PC has restarted, proceed to Step 6.
+
+## Step 6: Activating Windows 11
+
+If you haven't already activated Windows, you can use Microsoft Activation Scripts (MAS) to permanently activate your system for free.
+
+---
+
+Option A: PowerShell Method (Recommended)
+
+1. Open PowerShell as Administrator (right-click Start Menu > Terminal (Admin)).
+2. Copy and paste this command and press **Enter**:
+   `irm https://massgrave.dev/get | iex`
+3. The MAS menu will appear. Type the number corresponding to one of the **Green** options (e.g., HWID for permanent Windows activation) and press Enter.
+4. Follow the on-screen instructions.
+
+---
+
+Option B: Offline Method
+
+Use this method if you prefer downloading a file or cannot use the PowerShell method.
+
+1. Download the script from the official MAS repository:
+   - Direct script: [MAS_AIO.cmd](https://github.com/massgravel/Microsoft-Activation-Scripts/raw/master/MAS_AIO.cmd)
+   - Or download [MAS_AIO.zip](https://github.com/massgravel/Microsoft-Activation-Scripts/raw/master/MAS_AIO.zip) if the direct script is blocked by your browser.
+2. Run the `MAS_AIO.cmd` file.
+3. In the menu that appears, type the number corresponding to one of the **Green** options (e.g., HWID for permanent Windows activation).
+
+> [!CAUTION]
+> The `irm` command downloads a script from a URL and `iex` executes it. Always double-check the URL before running the command and verify the source is trustworthy. Be cautious of third parties spreading malware disguised as MAS by altering the URL.
+
+---
+
+Once activation is complete, proceed to Step 7.
