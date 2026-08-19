@@ -145,3 +145,24 @@ Screenshot reference: assets/delete-partitions.png
 ---
 
 After the installation finishes and your PC restarts, you will be greeted by the Windows 11 setup wizard. Proceed to Step 4.
+
+## Step 4: Skipping the Internet Check (The OOBE Bypass)
+
+Windows 11 forces you to connect to Wi-Fi and sign in with a Microsoft account during setup. We bypass this to create a local, offline account instead.
+
+1. When you reach the **Let's connect you to a network** screen, press **Shift + F10** on your keyboard.
+   - On some laptops, you may need to press **Shift + Fn + F10**.
+2. A black Command Prompt window will appear. Type `start ms-cxh:localonly` and press **Enter**.
+3. The local account creation screen will appear immediately. Fill in your username and password.
+   - You can leave the password blank if you want the PC to boot straight to the desktop without typing a password.
+4. Click **Next** and complete the setup.
+
+> [!TIP]
+> If `start ms-cxh:localonly` does not work for some reason, try the classic method instead:
+> - In the Command Prompt (Shift + F10), type `OOBE\BYPASSNRO` and press Enter.
+> - Your PC will restart. When it comes back, click **I don't have internet** > **Continue with limited setup**.
+> - If that also fails, type `taskmgr` in Command Prompt, find "Network Connection Flow" in Task Manager, and click **End Task**.
+
+---
+
+Once you have created your account, Windows will prepare your desktop. This may take a few minutes. Proceed to Step 5.
