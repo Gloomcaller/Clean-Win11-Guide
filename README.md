@@ -123,15 +123,12 @@ Your PC will now boot from the USB drive. You'll see a blue Windows setup screen
 5. Check the box to accept the license terms and click **Next**.
 6. **CRITICAL STEP:** Select **Custom: Install Windows only (advanced)**. Do NOT select Upgrade.
 7. You will now see a list of partitions on your drive(s). This is where the magic happens.
-
    - You will see entries like:
      - `Drive 0 Partition 1` (System Reserved)
      - `Drive 0 Partition 2`
      - `Drive 0 Partition 3` (Windows)
      - etc.
-
    - **THE NUCLEAR STEP:** Select **EVERY** partition on your main drive (usually Drive 0) one by one and click **Delete** for each.
-
    - After deleting all partitions, the drive should now show as a single entry called **Unallocated Space**.
 
 > [!CAUTION]
