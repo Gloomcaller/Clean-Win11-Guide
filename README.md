@@ -276,6 +276,7 @@ Below is a list of essential programs I install on every fresh Windows build. Yo
 | **DaVinci Resolve** | Video editing and color grading | [blackmagicdesign.com](https://www.blackmagicdesign.com/products/davinciresolve) |
 | **DirectX** | Gaming graphics runtime | [microsoft.com](https://www.microsoft.com/en-us/download/details.aspx?id=35) |
 | **Discord** | Voice and text chat for gaming | [discord.com](https://discord.com/download) |
+| **Draw.io** | Diagram drawing tool | [drawio.com](https://www.drawio.com/) |
 | **Epic Games** | Game launcher / store | [epicgames.com](https://store.epicgames.com/) |
 | **Firefox** | Web browser | [mozilla.org](https://www.mozilla.org/firefox/new/) |
 | **Gimp** | Image editing (Photoshop alternative) | [gimp.org](https://www.gimp.org/) |
